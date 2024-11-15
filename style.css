@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+  /*デフォルトの文字サイズは16px(単位remを使うときに便利）*/
+}
+
+body {
+  color: #24292e;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  font-family: "Hannari";
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+/*ここまでは全体に適応するcss*/
+
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+
+
+
+.site-title {
+  line-height: 1px;
+  /*line-heightは各行の幅*/
+  font-weight: 600;
+  /* font-weightは文字の太さ*/
+  font-size: 1.5rem;
+}
+
+
+.site-title a {
+  color: #24292e;
+  display: block;
+}
+
+.sec-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+/*header*/
+.header {
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  /*align-itemsは指定した要素を真ん中に（最初は右上にある）(この場合header全体の真ん中に設置するということ*/
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 4%;
+  height: 170px;
+  padding-bottom: 30px;
+}
+
+.header ul {
+  display: flex;
+  /*display-flexは横並びにする*/
+  padding: 5px 0;
+  align-items: center;
+}
+
+.header ul li {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  white-space: nowrap;
+  /*white-space-nowrapは横並びにする*/
+}
+
+
+
+.header ul li a {
+  color: #24292e;
+  transition: all 0.3s;
+}
+
+.header ul li a:hover {
+  opacity: 0.5;
+  /*opacityはカーソルや指を置いたときに半透明になる*/
+}
+
+/*.icon {
+  width: 40px;
+}   いらないかも(twitterのやつ）*/
+
+
+/*main*/
+
+.main {
+  margin-bottom: 80px;
+}
+
+
+.main img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/*about*/
+#about ul {
+  margin-bottom: 30px;
+}
+
+#about ul li:first-child {
+  margin-bottom: 30px;
+}
+
+#about ul li {
+  margin-bottom: 3px;
+}
+
+/*activity*/
+#activity ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#activity ul li {
+  width: 31%;
+  padding-bottom: 100px;
+}
+
+#activity ul li p {
+  text-align: center;
+}
+
+#activity ul li img {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#activity ul li img:hover {
+  transform: scale(1.2, 1.2);
+  opacity: 0.7;
+}
+
+/*News*/
+
+#news dl {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #c8c8c8;
+  margin-bottom: 20px;
+
+}
+
+#news dt {
+  width: 20%;
+  border-bottom: 1px solid #c8c8c8;
+  padding: 15px;
+}
+
+#news dd {
+  width: 80%;
+  border-bottom: 1px solid #c8c8c8;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+
+
+/*スマートフォン用 iphoneは390pxほど*/
+
+@media screen and (max-width:600px) {
+  .site-title {
+    margin-top: 30px;
+  }
+
+  .header ul li {
+    padding-top: 40px;
+    font-size: 0.9rem;
+  }
+
+  /*  .icon {
+    width: 20px;
+  }  いらないかも（twitterのやつ)   */
+
+
+  /*header*/
+  .header {
+    flex-direction: column;
+    height: auto;
+    line-height: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*main*/
+  .main img {
+    object-fit: cover;
+  }
+
+  /*activity*/
+  #activity ul {
+    flex-direction: column;
+  }
+
+  #activity ul li {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*news*/
+  #news dl {
+    flex-direction: column;
+  }
+
+  #news dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  #news dt {
+    width: 100%;
+  }
+}
