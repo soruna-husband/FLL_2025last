@@ -113,10 +113,23 @@ li {
 }
 
 
-.main img {
+.main picture img {
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
+}
+
+.access_counter img {
+  width: 25%;
+  margin: 0 auto;
+  height: auto;
+  margin-left: 40%;
+}
+
+.main h1 {
+  font-weight: bold;
+  font-size: 6.5rem;
+  text-shadow: #FC0 1px 0 10px;
 }
 
 /*about*/
@@ -182,7 +195,18 @@ li {
   font-size: 1.1rem;
 }
 
+/*us*/
 
+#us h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#us span {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
 /*スマートフォン用 iphoneは390pxほど*/
 
